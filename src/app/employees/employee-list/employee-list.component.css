@@ -1,0 +1,41 @@
+.container {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 1200px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+li {
+    flex: 1 1 calc(25% - 1.5rem);
+    max-width: 300px;
+}
+
+@media (max-width: 768px) {
+    li {
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    li {
+        flex: 1 1 100%;
+    }
+}
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+

@@ -1,1 +1,16 @@
-<p>employee-list works!</p>
+<div class="container">
+  <app-message
+    *ngIf="message"
+    [message]="message"
+    [messageType]="messageType">
+  </app-message>
+
+  <ul>
+    <li *ngFor="let employee of employees">
+      <app-employee-card
+        [employee]="employee"
+        (delete)="deleteEmployee(employee.id)">
+      </app-employee-card>
+    </li>
+  </ul>
+</div>

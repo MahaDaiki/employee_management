@@ -5,12 +5,14 @@ import { EmployeesRoutingModule } from './employees-routing.module';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeCardComponent } from './employee-card/employee-card.component';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
     EmployeeListComponent,
     EmployeeCardComponent,
-    EmployeeFormComponent
+    EmployeeFormComponent,
+    MessageComponent
   ],
   imports: [
     CommonModule,

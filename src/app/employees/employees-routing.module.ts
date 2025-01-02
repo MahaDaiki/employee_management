@@ -5,7 +5,7 @@ import { EmployeeFormComponent } from './employee-form/employee-form.component';
 
 
 const routes: Routes = [
-  {path :'employees', component:EmployeeListComponent},
+  {path :'', component:EmployeeListComponent},
   {path: 'add', component: EmployeeFormComponent},
   {path: ':id', component: EmployeeFormComponent},
 ];

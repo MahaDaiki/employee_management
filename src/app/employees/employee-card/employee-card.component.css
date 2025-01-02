@@ -1,0 +1,64 @@
+.employee-card {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s; /* Hover animation */
+}
+
+.employee-card:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+.employee-card h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.employee-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0.3rem 0;
+}
+
+.employee-card button {
+    background-color: #d30000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.employee-card button:hover {
+    background-color: #780000;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8);
+}
+
+.employee-card .icon {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.employee-card .icon img {
+    width: 24px;
+    height: 24px;
+}

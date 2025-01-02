@@ -7,6 +7,6 @@
     <p>📞: {{ employee.phoneNumber }}</p>
     <p>📅: {{ employee.dateOfHiring | date }}</p>
     <p>💼: {{ employee.postOccupied }}</p>
-    <button (click)="onDelete()">Delete</button>
-<!--    <button (click)="onEdit()">Edit</button>-->
+    <button class="delete" (click)="onDelete()">Delete</button>
+    <button class="edit" (click)="onEdit()">Edit</button>
 </div>

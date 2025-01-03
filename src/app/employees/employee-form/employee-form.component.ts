@@ -15,7 +15,7 @@ export class EmployeeFormComponent {
   employeeForm!: FormGroup;
   message: string | null = null;
   messageType: 'success' | 'error' = 'error';
-  private employeeId: number | null = null;
+  employeeId: number | null = null;
 
   constructor(
     private form: FormBuilder,
@@ -30,7 +30,7 @@ export class EmployeeFormComponent {
       this.createForm();
 
       if (this.employeeId) {
-        // Load employee details for editing
+
         this.loadEmployeeDetails(this.employeeId);
       }
     });

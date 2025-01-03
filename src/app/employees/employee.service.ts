@@ -43,9 +43,13 @@ export class EmployeeService {
     if (index !== -1) {
       employees[index] = updatedEmployee;
       localStorage.setItem(this.localStorage, JSON.stringify(employees));
+      return of({ employee: updatedEmployee, message: 'Employee updated successfully!' });
     }
-    return of({ employee: updatedEmployee, message: 'Employee not found.' });
+    else{ return throwError(() => new Error('Employee not found.'));
+    }
   }
+
+
   deleteEmployee(id: number): Observable<{ message: string }> {
     let employees = this.getEmployeesFromLocalStorage();
     employees = employees.filter(emp => emp.id !== id);

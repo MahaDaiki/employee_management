@@ -9,7 +9,7 @@
     <li *ngFor="let employee of employees">
       <app-employee-card
         [employee]="employee"
-        (delete)="deleteEmployee(employee.id)">
+        (delete)="deleteEmployee(employee.id)" (edit)="editEmployee(employee)">
       </app-employee-card>
     </li>
   </ul>

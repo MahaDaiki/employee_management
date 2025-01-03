@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { EmployeeService } from '../employee.service';
 import { Employee } from '../employee.model';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-employee-list',
@@ -12,7 +13,7 @@ export class EmployeeListComponent {
   employees: Employee[] = [];
   message: string | null = null;
   messageType: 'success' | 'error' = 'error';
-  constructor(private employeeService: EmployeeService) {}
+  constructor(private employeeService: EmployeeService,  private router: Router) {}
 
   ngOnInit(): void {
     this.loadEmployees();
@@ -42,6 +43,14 @@ export class EmployeeListComponent {
           this.messageType = 'error';
         }
       );
+    } else {
+      this.message = 'Employee ID is invalid.';
+      this.messageType = 'error';
+    }
+  }
+  editEmployee(employee: Employee): void {
+    if (employee.id) {
+      this.router.navigate(['/employees', employee.id]);
     } else {
       this.message = 'Employee ID is invalid.';
       this.messageType = 'error';

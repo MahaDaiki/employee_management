@@ -50,3 +50,7 @@ button[disabled] {
 button:hover:not([disabled]) {
   background-color: #45a049;
 }
+
+.errordisp{
+  color: darkred;
+}

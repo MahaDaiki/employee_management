@@ -5,7 +5,7 @@
     <h3>{{ employee.fullName }}</h3>
     <p>📧: {{ employee.email }}</p>
     <p>📞: {{ employee.phoneNumber }}</p>
-    <p>📅: {{ employee.dateOfHiring | date }}</p>
+    <p>📅: {{ employee.dateOfHiring | formatDate }}</p>
     <p>💼: {{ employee.postOccupied }}</p>
     <button class="delete" (click)="onDelete()">Delete</button>
     <button class="edit" (click)="onEdit()">Edit</button>
